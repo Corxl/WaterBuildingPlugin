@@ -1,0 +1,9 @@
+name: Nobuildabovewater
+version: '${project.version}'
+main: me.corxl.nobuildabovewater.Nobuildabovewater
+api-version: 1.15
+authors: [ Corxl ]
+
+permissions:
+  water.build:
+    description: Allows a user to build above water.
