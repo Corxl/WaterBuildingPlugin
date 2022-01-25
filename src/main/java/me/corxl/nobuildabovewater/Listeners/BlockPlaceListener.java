@@ -15,7 +15,6 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 
 public class BlockPlaceListener implements Listener {
@@ -39,7 +38,7 @@ public class BlockPlaceListener implements Listener {
             errorMessage(event.getPlayer());
             return;
         }
-        if (event.getClickedBlock().getType()==Material.SEAGRASS || event.getClickedBlock().getType()==Material.KELP_PLANT || event.getClickedBlock().getType()==Material.TALL_SEAGRASS) {
+        if (waterMats.contains(event.getClickedBlock().getType())) {
             event.setCancelled(true);
             errorMessage(event.getPlayer());
             return;
